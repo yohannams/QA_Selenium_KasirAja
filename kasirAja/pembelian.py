@@ -13,7 +13,7 @@ class TestPembelian(unittest.TestCase):
     def setUp(self):
         self.browser = webdriver.Chrome(ChromeDriverManager().install())
 
-    def test_a_failed_search(self):
+    def test_a_failed_search(self):  # TC19
         # steps
         driver = self.browser  # buka web browser
         baseLogin.test_a_success_login(driver)
@@ -27,7 +27,7 @@ class TestPembelian(unittest.TestCase):
         is_disabled = element.is_enabled()
         self.assertFalse(is_disabled)
 
-    def test_a_success_add_pembelian(self):
+    def test_a_success_add_pembelian(self):  # TC20
         # steps
         driver = self.browser  # buka web browser
         baseLogin.test_a_success_login(driver)
@@ -62,7 +62,7 @@ class TestPembelian(unittest.TestCase):
             EC.visibility_of_element_located((By.CLASS_NAME, "chakra-alert__title"))
         )  # eksplisit wait
 
-    def test_a_success_add_pembelian_invalid_jumlah(self):
+    def test_a_success_add_pembelian_invalid_jumlah(self):  # TC21
         # steps
         driver = self.browser  # buka web browser
         baseLogin.test_a_success_login(driver)

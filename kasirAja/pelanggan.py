@@ -13,7 +13,7 @@ class TestPelanggan(unittest.TestCase):
     def setUp(self):
         self.browser = webdriver.Chrome(ChromeDriverManager().install())
 
-    def test_a_success_add_pelanggan(self):
+    def test_a_success_add_pelanggan(self):  # TC5
         # steps
         driver = self.browser  # buka web browser
         baseLogin.test_a_success_login(driver)
@@ -39,7 +39,7 @@ class TestPelanggan(unittest.TestCase):
         ).text
         self.assertIn("lala", response_data)
 
-    def test_a_success_add_pelanggan_nohp_invalid(self):
+    def test_a_success_add_pelanggan_nohp_invalid(self):  # TC6
         # steps
         driver = self.browser  # buka web browser
         baseLogin.test_a_success_login(driver)
@@ -59,7 +59,7 @@ class TestPelanggan(unittest.TestCase):
         response_data = driver.find_element(By.ID, "chakra-alert").text
         self.assertIn('"phone" must be a number', response_data)
 
-    def test_a_success_edit_pelanggan(self):
+    def test_a_success_edit_pelanggan(self):  # TC7
         # steps
         driver = self.browser  # buka web browser
         baseLogin.test_a_success_login(driver)
@@ -87,7 +87,7 @@ class TestPelanggan(unittest.TestCase):
             EC.visibility_of_element_located((By.CLASS_NAME, "chakra-alert__title"))
         )  # eksplisit wait
 
-    def test_a_success_delete_pelanggan(self):
+    def test_a_success_delete_pelanggan(self):  # TC8
         # steps
         driver = self.browser  # buka web browser
         baseLogin.test_a_success_login(driver)

@@ -13,7 +13,7 @@ class TestKategori(unittest.TestCase):
     def setUp(self):
         self.browser = webdriver.Chrome(ChromeDriverManager().install())
 
-    def test_a_success_add_kategori(self):
+    def test_a_success_add_kategori(self):  # TC9
         # steps
         driver = self.browser  # buka web browser
         baseLogin.test_a_success_login(driver)
@@ -35,7 +35,7 @@ class TestKategori(unittest.TestCase):
         ).text
         self.assertIn("makanan", response_data)
 
-    def test_a_success_add_kategori_empty_deskripsi(self):
+    def test_a_success_add_kategori_empty_deskripsi(self):  # TC10
         # steps
         driver = self.browser  # buka web browser
         baseLogin.test_a_success_login(driver)
@@ -56,7 +56,7 @@ class TestKategori(unittest.TestCase):
         ).text
         self.assertIn("minuman", response_data)
 
-    def test_a_success_edit_kategori(self):
+    def test_a_success_edit_kategori(self):  # TC11
         # steps
         driver = self.browser  # buka web browser
         baseLogin.test_a_success_login(driver)
@@ -80,7 +80,7 @@ class TestKategori(unittest.TestCase):
             EC.visibility_of_element_located((By.CLASS_NAME, "chakra-alert__title"))
         )  # eksplisit wait
 
-    def test_a_success_delete_kategori(self):
+    def test_a_success_delete_kategori(self):  # TC12
         # steps
         driver = self.browser  # buka web browser
         baseLogin.test_a_success_login(driver)

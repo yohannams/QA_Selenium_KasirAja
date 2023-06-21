@@ -13,7 +13,7 @@ class TestProduk(unittest.TestCase):
     def setUp(self):
         self.browser = webdriver.Chrome(ChromeDriverManager().install())
 
-    def test_a_success_add_produk(self):
+    def test_a_success_add_produk(self):  # TC13
         # steps
         driver = self.browser  # buka web browser
         baseLogin.test_a_success_login(driver)
@@ -46,7 +46,7 @@ class TestProduk(unittest.TestCase):
         ).text
         self.assertIn("beras", response_data)
 
-    def test_a_success_add_produk_empty_deskripsi(self):
+    def test_a_success_add_produk_empty_deskripsi(self):  # TC14
         # steps
         driver = self.browser  # buka web browser
         baseLogin.test_a_success_login(driver)
@@ -72,7 +72,7 @@ class TestProduk(unittest.TestCase):
         )
         self.assertIn(response_data)
 
-    def test_a_success_edit_produk(self):
+    def test_a_success_edit_produk(self):  # TC15
         # steps
         driver = self.browser  # buka web browser
         baseLogin.test_a_success_login(driver)
@@ -103,7 +103,7 @@ class TestProduk(unittest.TestCase):
             EC.visibility_of_element_located((By.CLASS_NAME, "chakra-alert__title"))
         )  # eksplisit wait
 
-    def test_a_success_edit_produk_duplikasi_kode(self):
+    def test_a_success_edit_produk_duplikasi_kode(self):  # TC16
         # steps
         driver = self.browser  # buka web browser
         baseLogin.test_a_success_login(driver)
@@ -131,7 +131,7 @@ class TestProduk(unittest.TestCase):
         time.sleep(1)
         driver.find_element(By.ID, "chakra-alert")
 
-    def test_a_failed_edit_hargajual_invalid(self):
+    def test_a_failed_edit_hargajual_invalid(self):  # TC17
         # steps
         driver = self.browser  # buka web browser
         baseLogin.test_a_success_login(driver)
@@ -159,7 +159,7 @@ class TestProduk(unittest.TestCase):
         time.sleep(1)
         driver.find_element(By.ID, "chakra-alert")
 
-    def test_a_success_delete_produk(self):
+    def test_a_success_delete_produk(self):  # TC18
         # steps
         driver = self.browser  # buka web browser
         baseLogin.test_a_success_login(driver)
