@@ -1,6 +1,6 @@
 # selenium - kasirAja
 
-automation testing menggunakan Selenium - Python
+automation testing menggunakan Selenium - Python (belum menggunakan POM)
 
 PRD: https://docs.google.com/document/d/1UtyldQsDdRU8Qqxy6_U5rT2x7t6pWQifaGQZC7QQ4A4/edit?usp=drive_link
 <br>API documentation: https://docs.google.com/document/d/1W0XI71VrHLgnhRyziVUQqy62Acnh0FSxGHs9n4GIV_U/edit?usp=sharing
